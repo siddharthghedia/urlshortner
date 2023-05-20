@@ -11,7 +11,7 @@ class UrlService
     public function saveUrl(Url $url, $longUrl, $private): Url
     {
         $url->long_url = $longUrl;
-        $url->private = $private;
+        $url->private = $private ?? 0;
         $url->save();
 
         return $url;
