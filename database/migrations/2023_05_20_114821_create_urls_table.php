@@ -14,8 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->string('long_url')->unique();
             $table->string('short_url', 30)->nullable();
-            $table->tinyInteger('private')->default(0);
-            $table->tinyInteger('hide_stats')->default(0);
+            $table->boolean('private')->default(false);
             $table->timestamps();
         });
     }
