@@ -10,4 +10,8 @@ class Url extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    public function clicks() {
+        return $this->hasMany(Click::class);
+    }
 }
