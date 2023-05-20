@@ -12,7 +12,7 @@ return new class extends Migration {
     {
         Schema::create('urls', function (Blueprint $table) {
             $table->id();
-            $table->string('long_url')->unique();
+            $table->text('long_url');
             $table->string('short_url', 30)->nullable();
             $table->boolean('private')->default(false);
             $table->timestamps();
