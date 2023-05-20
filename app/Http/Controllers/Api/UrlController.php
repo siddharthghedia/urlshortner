@@ -31,4 +31,23 @@ class UrlController extends Controller
             'data' => $url,
         ]);
     }
+
+    public function getPublicUrlList()
+    {
+        $urls = Url::withCount('clicks')
+            ->where('private', 0)
+            ->orderBy('created_at', 'DESC')
+            ->simplePaginate(20);
+
+        $urls->getCollection()->transform(function ($url) {
+            $url->short_url = route('url.redirect', $url->short_url);
+            return $url;
+        });
+
+        return response()->json([
+            'success' => true,
+            'message' => 'List of public urls.',
+            'data' => $urls,
+        ]);
+    }
 }
