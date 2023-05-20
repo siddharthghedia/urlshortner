@@ -28,7 +28,14 @@ class UrlController extends Controller
         return response()->json([
             'success' => true,
             'message' => 'Url has been successfully shorten.',
-            'data' => $url,
+            'data' => [
+                'id' => $url->id,
+                "long_url" => $url->long_url,
+                "short_url" => route('url.redirect', $url->short_url),
+                "private" => $url->private,
+                "created_at" => $url->created_at,
+                "updated_at" => $url->updated_at,
+            ],
         ]);
     }
 
