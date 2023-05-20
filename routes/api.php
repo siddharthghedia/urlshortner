@@ -19,3 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::post('shorten', [UrlController::class, 'shorten']);
+Route::get('url-list', [UrlController::class, 'getPublicUrlList']);
