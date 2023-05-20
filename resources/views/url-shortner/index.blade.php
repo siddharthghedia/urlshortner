@@ -3,10 +3,11 @@
 <head>
     <meta charset="utf-8">
     <title>{{ config('app.name', 'Laravel') }}</title>
-    <!-- Scripts -->
-    @vite(['resources/js/app.js'])
     <!-- Styles -->
     @vite(['resources/css/app.css'])
+    <!-- Scripts -->
+    @vite(['resources/js/app.js'])
+    
 </head>
 <body>
     <div class="container text-center mt-5">
