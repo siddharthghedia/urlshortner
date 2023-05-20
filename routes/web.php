@@ -14,5 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', [UrlController::class, 'index'])->name('index');
 Route::post('shorten', [UrlController::class, 'shorten'])->name('url.shorten');
+Route::get('{hashValue}', [URLController::class, 'redirect'])->name('url.redirect');

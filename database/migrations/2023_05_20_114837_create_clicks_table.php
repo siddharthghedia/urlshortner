@@ -13,7 +13,6 @@ return new class extends Migration {
         Schema::create('clicks', function (Blueprint $table) {
             $table->id();
             $table->foreignId('url_id')->constrained();
-            $table->unsignedTinyInteger('click')->default(0);
             $table->timestamps();
         });
     }

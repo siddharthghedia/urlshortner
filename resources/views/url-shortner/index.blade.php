@@ -11,6 +11,11 @@
 </head>
 <body>
     <div class="container mt-5">
+        @if (session('short-url'))
+            <div class="alert alert-success">
+                Your Short URL is here: <a href="{{ route('url.redirect', session('short-url')) }}" target="_blank">{{ route('url.redirect', session('short-url')) }}</a>
+            </div>
+        @endif
         <form class="row justify-content-md-center" action="{{ route('url.shorten') }}" method="POST">
             @csrf
             <div class="col-6">
@@ -40,9 +45,9 @@
             <tbody>
                 @foreach($urls as $key => $url)
                     <tr>
-                        <td>{{ $url->short_url }}</td>
+                        <td><a href="{{ route('url.redirect', $url->short_url) }}" target="_blank">{{ route('url.redirect', $url->short_url) }}</a></td>
                         <td>{{ $url->long_url }}</td>
-                        {{-- <td>{{ $url->clicks->click }}</td> --}}
+                        <td>{{ $url->clicks_count }}</td>
                     </tr>
                 @endforeach
             </tbody>
