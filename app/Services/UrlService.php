@@ -2,9 +2,9 @@
 
 namespace App\Services;
 
+use App\Models\Click;
 use App\Models\Url;
 use Hashids\Hashids;
-use RuntimeException;
 
 class UrlService
 {
@@ -23,5 +23,13 @@ class UrlService
         $encodedValue = $hashId->encode($id);
         
         return $encodedValue;
+    }
+
+    public function saveClick(Click $click, $urlId): Click
+    {
+        $click->url_id = $urlId;
+        $click->save();
+
+        return $click;
     }
 }

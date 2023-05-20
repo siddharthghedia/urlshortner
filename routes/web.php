@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('short', [URLController::class, 'index']);
+Route::get('{hashValue}', [URLController::class, 'redirect']);
