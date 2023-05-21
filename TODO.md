@@ -7,3 +7,4 @@ Following is the TODO list:
 - Custom Short URL, user can enter their own short text, if that is available then they can use their own custom text
 - More stats to the clicks, like location - from which location did the URL got clicks.
 - Deploy the project to Ubuntu Server either Digital Ocean or Aws Ec2 instance
+- Write more test cases for UI version of the app
