@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "f9607a93-dd3d-4dbf-b2ec-1fcf8e0183c5",
+		"name": "urlshortner",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24698539"
+	},
+	"item": [
+		{
+			"name": "Save Url Record API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "long_url",
+							"value": "https://stackoverflow.com/questions/37102841/laravel-change-pagination-data",
+							"type": "text"
+						},
+						{
+							"key": "private",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://urlshortner.test/api/shorten",
+					"protocol": "http",
+					"host": [
+						"urlshortner",
+						"test"
+					],
+					"path": [
+						"api",
+						"shorten"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Public Url Record List API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://urlshortner.test/api/url-list",
+					"protocol": "http",
+					"host": [
+						"urlshortner",
+						"test"
+					],
+					"path": [
+						"api",
+						"url-list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
