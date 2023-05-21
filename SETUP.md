@@ -1,4 +1,4 @@
-##Installation
+## Installation
 Follow these steps to install and run the Laravel URL shortener application:
 
 - Clone the repository: git clone https://github.com/siddharthghedia/urlshortner.git
