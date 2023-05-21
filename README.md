@@ -1,7 +1,7 @@
 ## Laravel URL Shortener
 This is a URL shortener application built with Laravel. It allows users to generate short URLs for long URLs and provides click tracking functionality. The architecture of this application is based on the Model-View-Controller (MVC) design pattern.
 
-###Architecture Choice and Reasoning
+### Architecture Choice and Reasoning
 The choice of using the MVC architecture for this Laravel URL shortener project was driven by several factors:
 
 - **Separation of Concerns**: MVC promotes a clear separation of concerns between different components of the application. The models handle the data storage and retrieval, the views are responsible for presenting the data to the user, and the controllers handle the logic and act as intermediaries between the models and views. This separation enhances maintainability and allows for easier code organization.
