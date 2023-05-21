@@ -7,7 +7,7 @@
     @vite(['resources/css/app.css'])
     <!-- Scripts -->
     @vite(['resources/js/app.js'])
-    
+
 </head>
 <body>
     <div class="container mt-5">
@@ -19,8 +19,8 @@
         <form class="row justify-content-md-center" action="{{ route('url.shorten') }}" method="POST">
             @csrf
             <div class="col-6">
-                <input type="text" class="@error('url') is-invalid @enderror form-control" id="url-input" name="long_url" placeholder="URL" value="{{ old('url') }}">
-                <span class="text text-danger">{{ $errors->first('url') }}</span>
+                <input type="text" class="@error('long_url') is-invalid @enderror form-control" id="url-input" name="long_url" placeholder="URL" value="{{ old('url') }}">
+                <span class="text text-danger">{{ $errors->first('long_url') }}</span>
             </div>
             <div class="col-auto">
                 <div class="form-check">
@@ -46,7 +46,7 @@
                 @foreach($urls as $key => $url)
                     <tr>
                         <td><a href="{{ route('url.redirect', $url->short_url) }}" target="_blank">{{ route('url.redirect', $url->short_url) }}</a></td>
-                        <td>{{ $url->long_url }}</td>
+                        <td class="text-break">{{ $url->long_url }}</td>
                         <td>{{ $url->clicks_count }}</td>
                     </tr>
                 @endforeach
