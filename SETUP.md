@@ -10,5 +10,6 @@ Follow these steps to install and run the Laravel URL shortener application:
 - Start the development server: php artisan serve
 - PHPUnit Testcases for APIs: php artisan test
 - POSTMAN COLLECTION: https://github.com/siddharthghedia/urlshortner/blob/main/urlshortner.postman_collection.json
+- OPENAPI FOR SWAGGER: https://github.com/siddharthghedia/urlshortner/blob/main/openapi.yaml
 Access the application in your browser at http://localhost:8000
 Feel free to explore the application and generate short URLs!
